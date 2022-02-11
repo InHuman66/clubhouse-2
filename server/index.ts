@@ -1,8 +1,12 @@
 import express from 'express'
-import {passport} from './core/passport'
 import dotenv from 'dotenv'
 
-dotenv.config()
+dotenv.config({
+    path: 'server/.env'
+})
+
+import {passport} from './core/passport'
+import './core/db'
 
 const app = express()
 const port = 3001
